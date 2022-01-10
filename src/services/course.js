@@ -17,3 +17,38 @@ export const getQueryCourses = data => {
     data
   })
 }
+
+// 获取已购课程
+export const getPurchaseCourse = () => {
+  return request({
+    method: 'GET',
+    url: '/front/course/getPurchaseCourse'
+  })
+}
+
+// 获取课程详情
+export const getCourseById = params => {
+  return request({
+    method: 'GET',
+    url: 'front/course/getCourseById',
+    params
+  })
+}
+
+// 获取课程章节
+export const getSectionAndLesson = params => {
+  return request({
+    method: 'GET',
+    url: '/front/course/session/getSectionAndLesson',
+    params
+  })
+}
+
+// 根据 fileId 获取阿里云对应的视频播放信息
+export const getVideoInfo = params => {
+  return request({
+    method: 'GET',
+    url: '/front/course/media/videoPlayInfo',
+    params
+  })
+}
