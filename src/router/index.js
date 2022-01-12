@@ -42,6 +42,13 @@ const routes = [
     props: true
   },
   {
+    path: '/pay/:courseId',
+    name: 'pay',
+    component: () => import(/* webpackChunkName: 'pay' */'@/views/pay'),
+    meta: { requiresAuth: true },
+    props: true
+  },
+  {
     path: '*',
     name: 'error-page',
     component: () => import(/* webpackChunkName: 'error-page' */'@/views/error-page')

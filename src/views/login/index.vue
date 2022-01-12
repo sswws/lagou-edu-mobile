@@ -56,9 +56,16 @@
 </template>
 
 <script>
+import { NavBar, Form, Field, Button } from 'vant'
 import { login } from '@/services/user'
 export default ({
   name: 'Login',
+  components: {
+    VanNavBar: NavBar,
+    VanForm: Form,
+    VanField: Field,
+    VanButton: Button
+  },
   data () {
     return {
       form: {

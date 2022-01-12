@@ -9,8 +9,13 @@
 </template>
 
 <script>
+import { Tabbar, TabbarItem } from 'vant'
 export default ({
-  name: 'LayoutFooter'
+  name: 'LayoutFooter',
+  components: {
+    VanTabbar: Tabbar,
+    VanTabbarItem: TabbarItem
+  }
 })
 </script>
 

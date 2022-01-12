@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "amfe-flexible": "^2.2.1",
-    "axios": "^0.21.4",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vant": "^2.12.3",
     "vue": "^2.6.11",
@@ -31,7 +31,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
-    "image-webpack-loader": "^7.0.1",
+    "image-webpack-loader": "^8.1.0",
     "lint-staged": "^9.5.0",
     "postcss-pxtorem": "^5.1.1",
     "sass": "^1.26.5",

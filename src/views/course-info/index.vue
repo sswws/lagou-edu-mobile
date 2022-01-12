@@ -45,18 +45,28 @@
           <span class="discounts">{{ course.discounts }}</span>
           <span>¥{{ course.price }}</span>
         </div>
-        <van-button type="primary">立即购买</van-button>
+        <van-button
+          type="primary"
+          @click="handlePay"
+        >立即购买</van-button>
       </van-tabbar>
     </div>
 </template>
 
 <script>
+import { CellGroup, Cell, Tabs, Tab, Tabbar, Button } from 'vant'
 import CourseSection from './components/CourseSection'
 import { getCourseById, getSectionAndLesson } from '@/services/course'
 export default ({
   name: 'CourseInfo',
   components: {
-    CourseSection
+    CourseSection,
+    VanCellGroup: CellGroup,
+    VanCell: Cell,
+    VanTabs: Tabs,
+    VanTab: Tab,
+    VanTabbar: Tabbar,
+    VanButton: Button
   },
   props: {
     courseId: {
@@ -79,6 +89,25 @@ export default ({
     this.loadSections()
   },
   methods: {
+    handlePay () {
+      // 检测是否登陆
+      if (this.$store.state.user) {
+        // 如果已登陆，跳转支付页
+        this.$router.push({
+          name: 'pay',
+          params: {
+            courseId: this.courseId
+          }
+        })
+      } else {
+        this.$router.push({
+          name: 'login',
+          query: {
+            redirect: this.$route.fullPath
+          }
+        })
+      }
+    },
     async loadSections () {
       const { data } = await getSectionAndLesson({
         courseId: this.courseId

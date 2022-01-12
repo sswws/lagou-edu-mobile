@@ -7,11 +7,11 @@ import store from './store'
 import 'amfe-flexible'
 
 // 引入 Vant
-import Vant from 'vant'
-import 'vant/lib/index.css'
+// import Vant from 'vant'
+// import 'vant/lib/index.css'
 
 // 将 Vant 注册为 Vue 插件
-Vue.use(Vant)
+// Vue.use(Vant)
 
 Vue.config.productionTip = false
 

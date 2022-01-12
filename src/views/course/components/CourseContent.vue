@@ -14,11 +14,14 @@
 </template>
 
 <script>
+import { Swipe, SwipeItem } from 'vant'
 import CourseContentList from '@/components/CourseContentList'
 import { getAllAds, getQueryCourses } from '@/services/course'
 export default ({
   name: 'CourseContent',
   components: {
+    VanSwipe: Swipe,
+    VanSwipeItem: SwipeItem,
     CourseContentList
   },
   data () {

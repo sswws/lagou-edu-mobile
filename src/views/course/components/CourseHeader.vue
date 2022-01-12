@@ -5,8 +5,12 @@
 </template>
 
 <script>
+import { Image } from 'vant'
 export default ({
-  name: 'CourseHeader'
+  name: 'CourseHeader',
+  components: {
+    VanImage: Image
+  }
 })
 </script>
 
